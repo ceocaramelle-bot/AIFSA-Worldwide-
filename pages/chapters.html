@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapters | AIFSA Worldwide</title>
+
+    <meta name="description"
+        content="Explore AIFSA Worldwide chapters and connect with the Akwa Ibom Female Students Association community across institutions and locations.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* =====================================================
+           CHAPTERS PAGE
+        ===================================================== */
+
+        .chapters-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 0 100px;
+            background: #f8f6f0;
+        }
+
+        .chapters-hero::before {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            border: 1px solid rgba(18, 88, 62, 0.12);
+            border-radius: 50%;
+            right: -120px;
+            top: -160px;
+        }
+
+        .chapters-hero::after {
+            content: "";
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: rgba(217, 111, 44, 0.08);
+            left: -100px;
+            bottom: -110px;
+        }
+
+        .chapters-hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb a {
+            color: #12583e;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: #999;
+        }
+
+        .chapters-hero h1 {
+            max-width: 850px;
+            margin: 0 0 25px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1.02;
+            color: #18352a;
+        }
+
+        .chapters-hero h1 em {
+            color: #12583e;
+        }
+
+        .chapters-hero-description {
+            max-width: 720px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #626262;
+        }
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .chapters-intro {
+            background: #fff;
+        }
+
+        .chapters-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .chapters-intro-content h2 {
+            margin: 15px 0 22px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(36px, 5vw, 55px);
+            line-height: 1.12;
+            color: #18352a;
+        }
+
+        .chapters-intro-content h2 em {
+            color: #12583e;
+        }
+
+        .chapters-intro-content p {
+            margin-bottom: 18px;
+            color: #666;
+            line-height: 1.85;
+        }
+
+        .network-card {
+            padding: 55px;
+            background: #12583e;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .network-card::before,
+        .network-card::after {
+            content: "";
+            position: absolute;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50%;
+        }
+
+        .network-card::before {
+            width: 320px;
+            height: 320px;
+            right: -130px;
+            top: -130px;
+        }
+
+        .network-card::after {
+            width: 180px;
+            height: 180px;
+            left: -80px;
+            bottom: -80px;
+        }
+
+        .network-symbol {
+            position: relative;
+            z-index: 2;
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+
+        .network-card h3 {
+            position: relative;
+            z-index: 2;
+            margin: 0 0 15px;
+            font-family: "Playfair Display", serif;
+            font-size: 35px;
+        }
+
+        .network-card p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.8;
+        }
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .chapter-stats-section {
+            background: #f8f6f0;
+        }
+
+        .chapter-stats-large {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .chapter-stat {
+            padding: 45px 30px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .chapter-stat strong {
+            display: block;
+            margin-bottom: 8px;
+            font-family: "Playfair Display", serif;
+            font-size: 55px;
+            color: #12583e;
+        }
+
+        .chapter-stat span {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #777;
+        }
+
+        /* =====================================================
+           CHAPTERS DIRECTORY
+        ===================================================== */
+
+        .directory-section {
+            background: #fff;
+        }
+
+        .directory-heading {
+            max-width: 680px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .directory-heading h2 {
+            margin: 15px 0;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(36px, 5vw, 54px);
+            color: #18352a;
+        }
+
+        .directory-heading h2 em {
+            color: #12583e;
+        }
+
+        .directory-heading p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .chapter-card {
+            padding: 32px;
+            border: 1px solid #e8e5dc;
+            background: #fff;
+            transition: 0.3s ease;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-6px);
+            border-color: #12583e;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        .chapter-card-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            margin-bottom: 25px;
+            background: #12583e;
+            color: #fff;
+            font-family: "Playfair Display", serif;
+            font-size: 19px;
+        }
+
+        .chapter-card:nth-child(2n) .chapter-card-number {
+            background: #d96f2c;
+        }
+
+        .chapter-card h3 {
+            margin: 0 0 10px;
+            color: #18352a;
+            font-size: 20px;
+        }
+
+        .chapter-card p {
+            margin: 0 0 20px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .chapter-status {
+            display: inline-block;
+            padding: 7px 10px;
+            background: #eef5f1;
+            color: #12583e;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .chapter-status.upcoming {
+            background: #fff2e9;
+            color: #c45f20;
+        }
+
+        /* =====================================================
+           CHAPTER LEADERSHIP
+        ===================================================== */
+
+        .chapter-leadership {
+            background: #f8f6f0;
+        }
+
+        .chapter-leadership-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .chapter-leadership-content h2 {
+            margin: 15px 0 20px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(36px, 5vw, 54px);
+            line-height: 1.1;
+            color: #18352a;
+        }
+
+        .chapter-leadership-content h2 em {
+            color: #12583e;
+        }
+
+        .chapter-leadership-content p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .leadership-points {
+            display: grid;
+            gap: 14px;
+        }
+
+        .leadership-point {
+            display: grid;
+            grid-template-columns: 45px 1fr;
+            gap: 18px;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .leadership-point-icon {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #12583e;
+            color: #fff;
+        }
+
+        .leadership-point h3 {
+            margin: 0 0 5px;
+            font-size: 16px;
+            color: #18352a;
+        }
+
+        .leadership-point p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #777;
+        }
+
+        /* =====================================================
+           BECOME A CHAPTER
+        ===================================================== */
+
+        .chapter-cta {
+            background: #12583e;
+            color: #fff;
+            text-align: center;
+        }
+
+        .chapter-cta-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .chapter-cta .section-tag {
+            color: #fff;
+        }
+
+        .chapter-cta h2 {
+            margin: 18px 0;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 6vw, 62px);
+            line-height: 1.1;
+        }
+
+        .chapter-cta h2 em {
+            color: #f0a26e;
+        }
+
+        .chapter-cta p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.8;
+        }
+
+        .btn-white {
+            background: #fff;
+            color: #12583e;
+        }
+
+        .btn-white:hover {
+            background: #f8f6f0;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .chapters-intro-grid,
+            .chapter-leadership-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .chapter-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .chapters-hero {
+                padding: 125px 0 75px;
+            }
+
+            .chapter-stats-large {
+                grid-template-columns: 1fr;
+            }
+
+            .chapter-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .network-card {
+                padding: 40px 30px;
+            }
+
+            .chapter-card {
+                padding: 28px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .chapters-hero h1 {
+                font-size: 46px;
+            }
+
+            .chapters-hero-description {
+                font-size: 15px;
+            }
+
+            .chapter-leadership-grid {
+                gap: 35px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html#home" class="logo">
+
+            <span class="logo-mark">A</span>
+
+            <span class="logo-text">
+                <strong>AIFSA</strong>
+                <small>WORLDWIDE</small>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="../index.html#home" class="nav-link">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="leadership.html" class="nav-link">
+                Leadership
+            </a>
+
+            <a href="chapters.html" class="nav-link active">
+                Chapters
+            </a>
+
+            <a href="events.html" class="nav-link">
+                Events
+            </a>
+
+            <a href="gallery.html" class="nav-link">
+                Gallery
+            </a>
+
+            <a href="constitution.html" class="nav-link">
+                Constitution
+            </a>
+
+            <a href="../index.html#news" class="nav-link">
+                News
+            </a>
+
+            <a href="register.html" class="nav-join">
+                Join AIFSA
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="chapters-hero">
+
+    <div class="container chapters-hero-container">
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <span>→</span>
+
+            <span>Chapters</span>
+
+        </div>
+
+
+        <span class="section-tag">
+            OUR NETWORK
+        </span>
+
+
+        <h1>
+            One association.
+            <em>Many communities.</em>
+        </h1>
+
+
+        <p class="chapters-hero-description">
+            AIFSA connects Akwa Ibom female students across
+            institutions and locations, creating a network of
+            sisterhood, leadership, opportunity and shared purpose.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="chapters-intro section">
+
+    <div class="container chapters-intro-grid">
+
+        <div class="chapters-intro-content">
+
+            <span class="section-tag">
+                THE AIFSA NETWORK
+            </span>
+
+            <h2>
+                Your institution.
+                <em>Your chapter.</em>
+            </h2>
+
+            <p>
+                AIFSA chapters provide a local community through
+                which members can connect with one another, participate
+                in activities and access opportunities while remaining
+                part of the wider AIFSA family.
+            </p>
+
+            <p>
+                Each chapter serves as a bridge between the association
+                and female students within its institution or community.
+                Chapters can organize initiatives, encourage participation,
+                support members and promote the values of AIFSA.
+            </p>
+
+        </div>
+
+
+        <div class="network-card">
+
+            <div class="network-symbol">
+                ✦
+            </div>
+
+            <h3>
+                Connected by purpose.
+            </h3>
+
+            <p>
+                Wherever an AIFSA member studies or serves,
+                she remains part of a larger network of women
+                committed to growth, excellence and sisterhood.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NETWORK STATS
+===================================================== -->
+
+<section class="chapter-stats-section section">
+
+    <div class="container">
+
+        <div class="chapter-stats-large">
+
+            <div class="chapter-stat">
+
+                <strong>01</strong>
+
+                <span>
+                    Association
+                </span>
+
+            </div>
+
+
+            <div class="chapter-stat">
+
+                <strong>∞</strong>
+
+                <span>
+                    Possibilities
+                </span>
+
+            </div>
+
+
+            <div class="chapter-stat">
+
+                <strong>♥</strong>
+
+                <span>
+                    Sisterhood
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHAPTER DIRECTORY
+===================================================== -->
+
+<section class="directory-section section">
+
+    <div class="container">
+
+        <div class="directory-heading">
+
+            <span class="section-tag">
+                CHAPTER DIRECTORY
+            </span>
+
+            <h2>
+                Find your
+                <em>AIFSA community.</em>
+            </h2>
+
+            <p>
+                Our chapter directory will grow as AIFSA establishes
+                and officially recognizes chapters across institutions.
+            </p>
+
+        </div>
+
+
+        <div class="chapter-grid">
+
+            <!-- CHAPTER 01 -->
+
+            <article class="chapter-card">
+
+                <div class="chapter-card-number">
+                    01
+                </div>
+
+                <h3>
+                    AKSU Chapter
+                </h3>
+
+                <p>
+                    Akwa Ibom State University chapter.
+                    Official chapter information and leadership
+                    details will be published here.
+                </p>
+
+                <span class="chapter-status">
+                    Active Chapter
+                </span>
+
+            </article>
+
+
+            <!-- CHAPTER 02 -->
+
+            <article class="chapter-card">
+
+                <div class="chapter-card-number">
+                    02
+                </div>
+
+                <h3>
+                    University Chapters
+                </h3>
+
+                <p>
+                    Recognized AIFSA communities within universities
+                    and higher institutions will be listed here.
+                </p>
+
+                <span class="chapter-status upcoming">
+                    Directory Growing
+                </span>
+
+            </article>
+
+
+            <!-- CHAPTER 03 -->
+
+            <article class="chapter-card">
+
+                <div class="chapter-card-number">
+                    03
+                </div>
+
+                <h3>
+                    Polytechnic Chapters
+                </h3>
+
+                <p>
+                    AIFSA chapters within polytechnics and other
+                    tertiary institutions will be added here.
+                </p>
+
+                <span class="chapter-status upcoming">
+                    Coming Soon
+                </span>
+
+            </article>
+
+
+            <!-- CHAPTER 04 -->
+
+            <article class="chapter-card">
+
+                <div class="chapter-card-number">
+                    04
+                </div>
+
+                <h3>
+                    College Chapters
+                </h3>
+
+                <p>
+                    Recognized chapters within colleges and other
+                    eligible institutions can be featured here.
+                </p>
+
+                <span class="chapter-status upcoming">
+                    Coming Soon
+                </span>
+
+            </article>
+
+
+            <!-- CHAPTER 05 -->
+
+            <article class="chapter-card">
+
+                <div class="chapter-card-number">
+                    05
+                </div>
+
+                <h3>
+                    International Community
+                </h3>
+
+                <p>
+                    AIFSA members studying or living outside Nigeria
+                    can remain connected through the wider association.
+                </p>
+
+                <span class="chapter-status upcoming">
+                    Expanding
+                </span>
+
+            </article>
+
+
+            <!-- CHAPTER 06 -->
+
+            <article class="chapter-card">
+
+                <div class="chapter-card-number">
+                    06
+                </div>
+
+                <h3>
+                    New Chapter
+                </h3>
+
+                <p>
+                    Interested in establishing an AIFSA chapter
+                    within your institution? Start the conversation
+                    with the association.
+                </p>
+
+                <span class="chapter-status upcoming">
+                    Get Involved
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- <!-- =====================================================
+     CHAPTER LEADERSHIP
+===================================================== -->
+
+<section class="chapter-leadership section">
+
+    <div class="container chapter-leadership-grid">
+
+        <div class="chapter-leadership-content">
+
+            <span class="section-tag">
+                CHAPTER LEADERSHIP
+            </span>
+
+            <h2>
+                Leadership begins
+                <em>locally.</em>
+            </h2>
+
+            <p>
+                AIFSA chapters provide opportunities for members
+                to develop leadership skills through responsibility,
+                service and collaboration within their institutions.
+            </p>
+
+            <p>
+                Chapter leaders work with the wider association
+                to promote AIFSA's mission and ensure that members
+                have meaningful opportunities to participate.
+            </p>
+
+        </div>
+
+
+        <div class="leadership-points">
+
+            <article class="leadership-point">
+
+                <div class="leadership-point-icon">
+                    ♕
+                </div>
+
+                <div>
+
+                  <h3>
+                        Chapter Leadership
+                    </h3>
+
+                    <p>
+                        Coordinating chapter activities and
+                        representing members within the institution.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="leadership-point">
+
+                <div class="leadership-point-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <h3>
+                        Member Engagement
+                    </h3>
+
+                    <p>
+                        Creating an active and welcoming community
+                        where members can connect and participate.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="leadership-point">
+
+                <div class="leadership-point-icon">
+                    ◆
+                </div>
+
+                <div>
+
+                    <h3>
+                        Programmes & Activities
+                    </h3>
+
+                    <p>
+                        Supporting educational, leadership,
+                        social and community-focused initiatives.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="leadership-point">
+
+                <div class="leadership-point-icon">
+                    ♥
+                </div>
+
+                <div>
+
+                    <h3>
+                        Sisterhood & Support
+                    </h3>
+
+                    <p>
+                        Encouraging members and creating a supportive
+                        environment for personal and academic growth.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BECOME A CHAPTER
+===================================================== -->
+
+<section class="chapter-cta section">
+
+    <div class="container chapter-cta-container">
+
+        <span class="section-tag">
+            BUILD THE NETWORK
+        </span>
+
+        <h2>
+            Is there an AIFSA
+            community at your <em>institution?</em>
+        </h2>
+
+        <p>
+            If your institution does not yet have an AIFSA chapter,
+            connect with the association to explore how a recognized
+            chapter can be established and supported.
+        </p>
+
+        <a
+            href="register.html"
+            class="btn btn-white">
+
+            Join AIFSA →
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html#home"
+                    class="logo footer-logo">
+
+                    <span class="logo-mark">
+                        A
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>AIFSA</strong>
+                        <small>WORLDWIDE</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Akwa Ibom Female Students Association.
+                    A community committed to the value of womanhood.
+                </p>
+
+                <strong class="footer-motto">
+                    THE VALUE OF WOMANHOOD.
+                </strong>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <h4>EXPLORE</h4>
+
+                    <a href="about.html">
+                        About AIFSA
+                    </a>
+
+                    <a href="leadership.html">
+                        Leadership
+                    </a>
+
+                    <a href="chapters.html">
+                        Chapters
+                    </a>
+
+                    <a href="events.html">
+                        Events
+                    </a>
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+                    <a href="constitution.html">
+                        Constitution
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>CONNECT</h4>
+
+                    <a href="../index.html#news">
+                        News
+                    </a>
+
+                    <a href="event-archive.html">
+                        Event Archive
+                    </a>
+
+                    <a href="register.html">
+                        Membership
+                    </a>
+
+                    <a href="#">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="currentYear"></span>
+                AIFSA Worldwide. All rights reserved.
+            </span>
+
+            <span>
+                Akwa Ibom Female Students Association
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../app.js"></script>
+
+<script>
+
+    const yearElement = document.getElementById("currentYear");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+
+        });
+
+
+        const navLinks = navMenu.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navMenu.classList.remove("active");
+                menuToggle.classList.remove("active");
+
+            });
+
+        });
+
+    }
+
+</script>
+
+</body>
+</html>
