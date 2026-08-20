@@ -1,0 +1,1071 @@
+/* =====================================================
+AIFSA WORLDWIDE
+AUTHENTICATION STYLES
+===================================================== */
+
+:root {
+
+--green: #00843D;
+--green-dark: #00552A;
+--green-deep: #003D20;
+--green-soft: #EAF5EE;
+
+--orange: #F28C28;
+--orange-dark: #D96F0B;
+
+--white: #FFFFFF;
+--off-white: #F8FAF8;
+
+--black: #101512;
+--gray: #66706A;
+--light-gray: #DDE6E0;
+
+--danger: #C62828;
+
+--heading: "Playfair Display", serif;
+--body: "DM Sans", sans-serif;
+
+}
+
+/* =====================================================
+RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: var(--body);
+color: var(--black);
+background: var(--off-white);
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+/* =====================================================
+PAGE
+===================================================== */
+
+.auth-page {
+
+min-height: 100vh;
+
+display: grid;
+
+grid-template-columns: 0.9fr 1.1fr;
+
+}
+
+/* =====================================================
+BRAND SIDE
+===================================================== */
+
+.auth-brand {
+
+position: relative;
+
+min-height: 100vh;
+
+padding: 45px;
+
+overflow: hidden;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+color: white;
+
+background:
+
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(242,140,40,0.28),
+        transparent 28%
+    ),
+
+    linear-gradient(
+        145deg,
+        var(--green),
+        var(--green-deep)
+    );
+
+}
+
+.auth-brand::before {
+
+content: "";
+
+position: absolute;
+
+width: 500px;
+height: 500px;
+
+border-radius: 50%;
+
+border: 1px solid rgba(255,255,255,0.12);
+
+right: -220px;
+bottom: -180px;
+
+}
+
+.auth-brand::after {
+
+content: "";
+
+position: absolute;
+
+width: 300px;
+height: 300px;
+
+border-radius: 50%;
+
+border: 1px solid rgba(242,140,40,0.3);
+
+right: -100px;
+bottom: -70px;
+
+}
+
+/* =====================================================
+LOGO
+===================================================== */
+
+.brand-logo {
+
+display: inline-flex;
+
+align-items: center;
+
+gap: 11px;
+
+position: relative;
+
+z-index: 2;
+
+}
+
+.brand-mark {
+
+width: 45px;
+height: 45px;
+
+border-radius: 50%;
+
+display: grid;
+
+place-items: center;
+
+background: var(--orange);
+
+color: var(--green-deep);
+
+border: 3px solid white;
+
+font-family: var(--heading);
+
+font-size: 23px;
+
+}
+
+.brand-logo strong,
+.brand-logo small {
+
+display: block;
+
+}
+
+.brand-logo strong {
+
+font-size: 19px;
+
+letter-spacing: 1px;
+
+}
+
+.brand-logo small {
+
+color: var(--orange);
+
+font-size: 8px;
+
+font-weight: 800;
+
+letter-spacing: 3px;
+
+margin-top: 4px;
+
+}
+
+/* =====================================================
+BRAND CONTENT
+===================================================== */
+
+.brand-content {
+
+position: relative;
+
+z-index: 2;
+
+max-width: 520px;
+
+}
+
+.brand-label {
+
+display: block;
+
+color: rgba(255,255,255,0.6);
+
+font-size: 9px;
+
+font-weight: 800;
+
+letter-spacing: 2px;
+
+line-height: 1.6;
+
+margin-bottom: 20px;
+
+}
+
+.brand-content h1 {
+
+font-family: var(--heading);
+
+font-size: clamp(52px, 5vw, 76px);
+
+line-height: 0.98;
+
+letter-spacing: -3px;
+
+}
+
+.brand-content h1 em {
+
+display: block;
+
+color: var(--orange);
+
+font-style: italic;
+
+}
+
+.brand-content p {
+
+max-width: 450px;
+
+color: rgba(255,255,255,0.65);
+
+font-size: 13px;
+
+line-height: 1.8;
+
+margin-top: 28px;
+
+}
+
+/* MOTTO */
+
+.brand-motto {
+
+display: flex;
+
+align-items: center;
+
+gap: 14px;
+
+margin-top: 35px;
+
+}
+
+.brand-motto > span {
+
+width: 35px;
+
+height: 2px;
+
+background: var(--orange);
+
+}
+
+.brand-motto small,
+.brand-motto strong {
+
+display: block;
+
+}
+
+.brand-motto small {
+
+color: rgba(255,255,255,0.45);
+
+font-size: 7px;
+
+font-weight: 800;
+
+letter-spacing: 2px;
+
+}
+
+.brand-motto strong {
+
+color: white;
+
+font-family: var(--heading);
+
+font-size: 14px;
+
+margin-top: 3px;
+
+}
+
+.brand-footer {
+
+position: relative;
+
+z-index: 2;
+
+color: rgba(255,255,255,0.35);
+
+font-size: 9px;
+
+}
+
+/* =====================================================
+FORM SIDE
+===================================================== */
+
+.auth-form-section {
+
+min-height: 100vh;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 50px 60px;
+
+background: var(--off-white);
+
+overflow-y: auto;
+
+}
+
+.form-container {
+
+width: 100%;
+
+max-width: 600px;
+
+}
+
+.mobile-logo {
+
+display: none;
+
+}
+
+/* =====================================================
+FORM HEADER
+===================================================== */
+
+.form-header {
+
+margin-bottom: 32px;
+
+}
+
+.form-tag {
+
+color: var(--green);
+
+font-size: 9px;
+
+font-weight: 800;
+
+letter-spacing: 2px;
+
+}
+
+.form-header h2 {
+
+font-family: var(--heading);
+
+color: var(--green-deep);
+
+font-size: clamp(40px, 4vw, 54px);
+
+line-height: 1;
+
+margin-top: 10px;
+
+}
+
+.form-header h2 em {
+
+color: var(--orange);
+
+font-style: italic;
+
+}
+
+.form-header p {
+
+color: var(--gray);
+
+font-size: 12px;
+
+margin-top: 13px;
+
+}
+
+/* =====================================================
+FORM
+===================================================== */
+
+form {
+width: 100%;
+}
+
+.form-group {
+margin-bottom: 17px;
+}
+
+.form-row {
+
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+gap: 15px;
+
+}
+
+label {
+
+display: block;
+
+color: var(--green-deep);
+
+font-size: 10px;
+
+font-weight: 800;
+
+margin-bottom: 7px;
+
+}
+
+input,
+select {
+
+width: 100%;
+
+height: 47px;
+
+border: 1px solid var(--light-gray);
+
+border-radius: 9px;
+
+background: white;
+
+color: var(--black);
+
+padding: 0 14px;
+
+font-family: var(--body);
+
+font-size: 12px;
+
+outline: none;
+
+transition: 0.25s ease;
+
+}
+
+input::placeholder {
+color: #A3ADA6;
+}
+
+input:focus,
+select:focus {
+
+border-color: var(--green);
+
+box-shadow:
+    0 0 0 3px rgba(0,132,61,0.08);
+
+}
+
+select {
+cursor: pointer;
+}
+
+/* =====================================================
+PROFILE PHOTO
+===================================================== */
+
+.photo-section {
+
+display: flex;
+
+align-items: center;
+
+gap: 20px;
+
+padding: 17px;
+
+margin-bottom: 24px;
+
+border: 1px solid var(--light-gray);
+
+border-radius: 12px;
+
+background: white;
+
+}
+
+.photo-upload {
+
+flex-shrink: 0;
+
+text-align: center;
+
+}
+
+.photo-preview {
+
+width: 92px;
+height: 108px;
+
+border-radius: 8px;
+
+border: 2px dashed #B7C9BC;
+
+background: var(--green-soft);
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+overflow: hidden;
+
+position: relative;
+
+color: var(--green);
+
+font-size: 30px;
+
+font-weight: 300;
+
+}
+
+.photo-preview img {
+
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+display: none;
+
+}
+
+.photo-preview.has-image img {
+display: block;
+}
+
+.photo-preview.has-image #photoPlaceholder {
+display: none;
+}
+
+.photo-button {
+
+display: inline-block;
+
+color: var(--green);
+
+font-size: 9px;
+
+font-weight: 800;
+
+margin-top: 8px;
+
+cursor: pointer;
+
+text-decoration: underline;
+
+}
+
+.photo-info {
+flex: 1;
+}
+
+.photo-info strong {
+
+display: block;
+
+color: var(--green-deep);
+
+font-size: 11px;
+
+margin-bottom: 5px;
+
+}
+
+.photo-info p {
+
+color: var(--gray);
+
+font-size: 9px;
+
+line-height: 1.6;
+
+margin-bottom: 6px;
+
+}
+
+.photo-info small {
+
+color: #9AA59E;
+
+font-size: 8px;
+
+}
+
+.photo-error {
+
+color: var(--danger);
+
+font-size: 8px;
+
+margin-top: 5px;
+
+}
+
+/* =====================================================
+LOCATION HINT
+===================================================== */
+
+.location-hint {
+
+display: block;
+
+color: #9AA59E;
+
+font-size: 8px;
+
+margin-top: 5px;
+
+}
+
+/* =====================================================
+PASSWORD
+===================================================== */
+
+.password-wrapper {
+position: relative;
+}
+
+.password-wrapper input {
+padding-right: 65px;
+}
+
+.password-toggle {
+
+position: absolute;
+
+top: 50%;
+
+right: 12px;
+
+transform: translateY(-50%);
+
+border: none;
+
+background: transparent;
+
+color: var(--green);
+
+font-size: 10px;
+
+font-weight: 800;
+
+cursor: pointer;
+
+}
+
+.password-hint {
+
+display: block;
+
+color: var(--gray);
+
+font-size: 8px;
+
+margin-top: 5px;
+
+}
+
+/* =====================================================
+ERRORS
+===================================================== */
+
+.error-message {
+
+display: block;
+
+color: var(--danger);
+
+font-size: 8px;
+
+margin-top: 4px;
+
+min-height: 0;
+
+}
+
+.form-group.has-error input,
+.form-group.has-error select {
+
+border-color: var(--danger);
+
+}
+
+/* =====================================================
+TERMS
+===================================================== */
+
+.terms {
+margin: 5px 0 20px;
+}
+
+.checkbox-label {
+
+display: flex;
+
+align-items: flex-start;
+
+gap: 9px;
+
+color: var(--gray);
+
+font-size: 10px;
+
+font-weight: 500;
+
+cursor: pointer;
+
+line-height: 1.5;
+
+}
+
+.checkbox-label input {
+
+position: absolute;
+
+opacity: 0;
+
+pointer-events: none;
+
+}
+
+.custom-checkbox {
+
+flex-shrink: 0;
+
+width: 17px;
+height: 17px;
+
+border: 1px solid var(--light-gray);
+
+border-radius: 4px;
+
+background: white;
+
+margin-top: 1px;
+
+position: relative;
+
+}
+
+.checkbox-label input:checked + .custom-checkbox {
+
+background: var(--green);
+
+border-color: var(--green);
+
+}
+
+.checkbox-label input:checked + .custom-checkbox::after {
+
+content: "✓";
+
+position: absolute;
+
+left: 3px;
+top: -1px;
+
+color: white;
+
+font-size: 12px;
+
+font-weight: 800;
+
+}
+
+.checkbox-label a {
+
+color: var(--green);
+
+font-weight: 700;
+
+}
+
+/* =====================================================
+BUTTON
+===================================================== */
+
+.submit-btn {
+
+width: 100%;
+
+height: 52px;
+
+border: none;
+
+border-radius: 30px;
+
+background: var(--green);
+
+color: white;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 15px;
+
+font-family: var(--body);
+
+font-size: 12px;
+
+font-weight: 800;
+
+cursor: pointer;
+
+box-shadow:
+    0 10px 25px rgba(0,132,61,0.16);
+
+transition: 0.3s ease;
+
+}
+
+.submit-btn:hover {
+
+background: var(--green-dark);
+
+transform: translateY(-2px);
+
+}
+
+.submit-btn .arrow {
+
+color: var(--orange);
+
+font-size: 18px;
+
+}
+
+.submit-btn.loading {
+
+opacity: 0.65;
+
+pointer-events: none;
+
+}
+
+/* =====================================================
+STATUS
+===================================================== */
+
+.form-status {
+
+display: none;
+
+padding: 12px 14px;
+
+border-radius: 8px;
+
+font-size: 10px;
+
+margin-top: 15px;
+
+text-align: center;
+
+}
+
+.form-status.success {
+
+display: block;
+
+background: var(--green-soft);
+
+color: var(--green-dark);
+
+}
+
+.form-status.error {
+
+display: block;
+
+background: #FDECEC;
+
+color: var(--danger);
+
+}
+
+/* =====================================================
+LOGIN
+===================================================== */
+
+.login-link {
+
+text-align: center;
+
+color: var(--gray);
+
+font-size: 10px;
+
+margin-top: 22px;
+
+}
+
+.login-link a {
+
+color: var(--green);
+
+font-weight: 800;
+
+margin-left: 3px;
+
+}
+
+.back-home {
+
+display: block;
+
+width: fit-content;
+
+margin: 25px auto 0;
+
+color: var(--gray);
+
+font-size: 9px;
+
+transition: 0.25s ease;
+
+}
+
+.back-home:hover {
+color: var(--green);
+}
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+.auth-page {
+    grid-template-columns: 1fr;
+}
+
+.auth-brand {
+    display: none;
+}
+
+.auth-form-section {
+
+    padding: 35px 25px;
+
+    align-items: flex-start;
+}
+
+.mobile-logo {
+
+    display: block;
+
+    margin-bottom: 50px;
+}
+
+.mobile-logo .brand-logo {
+    color: var(--green-deep);
+}
+
+.mobile-logo .brand-logo strong {
+    color: var(--green-deep);
+}
+
+.mobile-logo .brand-logo small {
+    color: var(--green);
+}
+
+}
+
+@media (max-width: 600px) {
+
+.auth-form-section {
+    padding: 25px 18px 40px;
+}
+
+.mobile-logo {
+    margin-bottom: 35px;
+}
+
+.form-row {
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+}
+
+.form-header h2 {
+    font-size: 40px;
+}
+
+.photo-section {
+
+    align-items: flex-start;
+
+    padding: 13px;
+
+    gap: 14px;
+}
+
+.photo-preview {
+
+    width: 75px;
+    height: 90px;
+}
+
+.photo-info p {
+    font-size: 8px;
+}
+
+}
