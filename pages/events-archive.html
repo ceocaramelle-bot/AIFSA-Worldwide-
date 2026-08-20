@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events Archive | AIFSA Worldwide</title>
+
+    <meta name="description"
+        content="Explore the official AIFSA Worldwide events archive, preserving programmes, milestones, photographs, speeches and memories from the Akwa Ibom Female Students Association.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+
+        /* =====================================================
+           EVENTS ARCHIVE PAGE
+        ===================================================== */
+
+        .archive-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 0 105px;
+            background: #f8f6f0;
+        }
+
+        .archive-hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(18, 88, 62, 0.12);
+            border-radius: 50%;
+            right: -180px;
+            top: -220px;
+        }
+
+        .archive-hero::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(217, 111, 44, 0.07);
+            border-radius: 50%;
+            left: -120px;
+            bottom: -130px;
+        }
+
+        .archive-hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1050px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb a {
+            color: #12583e;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: #999;
+        }
+
+        .archive-hero h1 {
+            max-width: 850px;
+            margin: 0 0 25px;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1.02;
+        }
+
+        .archive-hero h1 em {
+            color: #12583e;
+        }
+
+        .archive-hero-description {
+            max-width: 720px;
+            color: #626262;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           ARCHIVE INTRO
+        ===================================================== */
+
+        .archive-intro {
+            background: #fff;
+        }
+
+        .archive-intro-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .archive-intro-content h2 {
+            margin: 15px 0 20px;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 5vw, 55px);
+            line-height: 1.1;
+        }
+
+        .archive-intro-content h2 em {
+            color: #12583e;
+        }
+
+        .archive-intro-content p {
+            color: #666;
+            line-height: 1.85;
+        }
+
+        .archive-note {
+            margin-top: 25px;
+            padding: 20px;
+            border-left: 3px solid #d96f2c;
+            background: #f8f6f0;
+            color: #666;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .archive-stat-card {
+            position: relative;
+            overflow: hidden;
+            padding: 45px;
+            background: #12583e;
+            color: #fff;
+        }
+
+        .archive-stat-card::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+            right: -130px;
+            top: -130px;
+        }
+
+        .archive-stat-card::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 50%;
+            left: -90px;
+            bottom: -90px;
+        }
+
+        .archive-stat-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .archive-stat-content span {
+            display: block;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,.65);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .archive-stat-content strong {
+            display: block;
+            margin-bottom: 12px;
+            font-family: "Playfair Display", serif;
+            font-size: 65px;
+            line-height: 1;
+        }
+
+        .archive-stat-content p {
+            max-width: 300px;
+            margin: 0;
+            color: rgba(255,255,255,.72);
+            line-height: 1.7;
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           FILTER
+        ===================================================== */
+
+        .archive-list-section {
+            background: #f8f6f0;
+        }
+
+        .archive-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
+        .archive-toolbar h2 {
+            margin: 12px 0 0;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+        }
+
+        .archive-filter {
+            min-width: 190px;
+        }
+
+        .archive-filter label {
+            display: block;
+            margin-bottom: 8px;
+            color: #777;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .archive-filter select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #ddd8ce;
+            outline: none;
+            background: #fff;
+            color: #333;
+            font-family: "DM Sans", sans-serif;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           EVENT ARCHIVE CARD
+        ===================================================== */
+
+        .archive-grid {
+            display: grid;
+            gap: 28px;
+        }
+
+        .archive-card {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #e4e0d7;
+            transition: .3s ease;
+        }
+
+        .archive-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 45px rgba(0,0,0,.06);
+        }
+
+        .archive-image {
+            min-height: 300px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #12583e;
+            color: #fff;
+        }
+
+        .archive-image::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+        }
+
+        .archive-image-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .archive-image-content .archive-year {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 60px;
+            line-height: 1;
+        }
+
+        .archive-image-content span:last-child {
+            display: block;
+            margin-top: 10px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .archive-image-orange {
+            background: #d96f2c;
+        }
+
+        .archive-image-dark {
+            background: #18352a;
+        }
+
+        .archive-image-gold {
+            background: #9b7134;
+        }
+
+        .archive-content {
+            padding: 38px;
+        }
+
+        .archive-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 13px;
+        }
+
+        .archive-category {
+            padding: 6px 9px;
+            background: #eef5f1;
+            color: #12583e;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+        }
+
+        .archive-date {
+            color: #999;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .archive-content h3 {
+            margin: 0 0 13px;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: 29px;
+            line-height: 1.2;
+        }
+
+        .archive-theme {
+            margin-bottom: 15px;
+            color: #12583e;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .archive-content p {
+            margin-bottom: 22px;
+            color: #6b6b6b;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .archive-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .archive-highlight {
+            padding: 7px 10px;
+            background: #f8f6f0;
+            color: #777;
+            font-size: 10px;
+        }
+
+        .archive-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .archive-link {
+            color: #12583e;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .5px;
+        }
+
+        .archive-link:hover {
+            color: #d96f2c;
+        }
+
+
+        /* =====================================================
+           FEATURED MEMORY
+        ===================================================== */
+
+        .memory-section {
+            background: #fff;
+        }
+
+        .memory-box {
+            position: relative;
+            overflow: hidden;
+            padding: 75px 50px;
+            background: #18352a;
+            color: #fff;
+            text-align: center;
+        }
+
+        .memory-box::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 50%;
+            right: -180px;
+            top: -200px;
+        }
+
+        .memory-box::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 50%;
+            left: -130px;
+            bottom: -150px;
+        }
+
+        .memory-content {
+            position: relative;
+            z-index: 2;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .memory-content h2 {
+            margin: 15px 0 20px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 5vw, 55px);
+            line-height: 1.1;
+        }
+
+        .memory-content h2 em {
+            color: #f0a26e;
+        }
+
+        .memory-content p {
+            color: rgba(255,255,255,.72);
+            line-height: 1.85;
+        }
+
+
+        /* =====================================================
+           TIMELINE
+        ===================================================== */
+
+        .timeline-section {
+            background: #f8f6f0;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 78px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: #d8d4cb;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 35px;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .timeline-year {
+            position: relative;
+            z-index: 2;
+            color: #12583e;
+            font-family: "Playfair Display", serif;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .timeline-content {
+            position: relative;
+            padding: 25px;
+            background: #fff;
+            border: 1px solid #e4e0d7;
+        }
+
+        .timeline-content::before {
+            content: "";
+            position: absolute;
+            left: -41px;
+            top: 30px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #d96f2c;
+            border: 3px solid #f8f6f0;
+            box-sizing: content-box;
+        }
+
+        .timeline-content h3 {
+            margin: 0 0 8px;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: 22px;
+        }
+
+        .timeline-content p {
+            margin: 0;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           ADD EVENT
+        ===================================================== */
+
+        .archive-cta {
+            background: #fff;
+        }
+
+        .archive-cta-box {
+            padding: 60px 30px;
+            border: 1px solid #e4e0d7;
+            text-align: center;
+        }
+
+        .archive-cta-box h2 {
+            margin: 15px 0;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(36px, 5vw, 50px);
+        }
+
+        .archive-cta-box h2 em {
+            color: #12583e;
+        }
+
+        .archive-cta-box p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #777;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .archive-intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .archive-card {
+                grid-template-columns: 1fr;
+            }
+
+            .archive-image {
+                min-height: 250px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .archive-hero {
+                padding: 125px 0 75px;
+            }
+
+            .archive-toolbar {
+                display: block;
+            }
+
+            .archive-filter {
+                margin-top: 25px;
+            }
+
+            .archive-content {
+                padding: 25px;
+            }
+
+            .archive-content h3 {
+                font-size: 25px;
+            }
+
+            .memory-box {
+                padding: 55px 25px;
+            }
+
+            .timeline::before {
+                left: 5px;
+            }
+
+            .timeline-item {
+                display: block;
+                padding-left: 30px;
+            }
+
+            .timeline-year {
+                margin-bottom: 12px;
+            }
+
+            .timeline-content::before {
+                left: -31px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html#home" class="logo">
+
+            <span class="logo-mark">
+                A
+            </span>
+
+            <span class="logo-text">
+                <strong>AIFSA</strong>
+                <small>WORLDWIDE</small>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="../index.html#home" class="nav-link">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="leadership.html" class="nav-link">
+                Leadership
+            </a>
+
+            <a href="chapters.html" class="nav-link">
+                Chapters
+            </a>
+
+            <a href="events.html" class="nav-link">
+                Events
+            </a>
+
+            <a href="events-archive.html" class="nav-link active">
+                Archive
+            </a>
+
+            <a href="gallery.html" class="nav-link">
+                Gallery
+            </a>
+
+            <a href="constitution.html" class="nav-link">
+                Constitution
+            </a>
+
+            <a href="../index.html#news" class="nav-link">
+                News
+            </a>
+
+            <a href="register.html" class="nav-join">
+                Join AIFSA
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="archive-hero">
+
+    <div class="container archive-hero-container">
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <span>→</span>
+
+            <span>
+                Events Archive
+            </span>
+
+        </div>
+
+
+        <span class="section-tag">
+            AIFSA ARCHIVE
+        </span>
+
+
+        <h1>
+            Our story,
+            <em>preserved.</em>
+        </h1>
+
+
+        <p class="archive-hero-description">
+            A digital record of the events, programmes, milestones,
+            voices and memories that have shaped the Akwa Ibom
+            Female Students Association.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="archive-intro section">
+
+    <div class="container archive-intro-grid">
+
+
+        <div class="archive-intro-content">
+
+            <span class="section-tag">
+                OUR HISTORY
+            </span>
+
+            <h2>
+                Every event becomes
+                <em>part of our story.</em>
+            </h2>
+
+            <p>
+                AIFSA's events are more than dates on a calendar.
+                They are moments where women meet, ideas are shared,
+                leaders emerge, friendships are formed and memories
+                are created.
+            </p>
+
+            <p>
+                This archive exists to preserve those moments for
+                present members, future leaders, alumni and everyone
+                who wants to understand the journey of AIFSA.
+            </p>
+
+            <div class="archive-note">
+
+                <strong>
+                    A living archive.
+                </strong>
+
+                New events, photographs, speeches, reports,
+                achievements and historical records can be added
+                to this page as AIFSA continues to grow.
+
+            </div>
+
+        </div>
+
+
+        <div class="archive-stat-card">
+
+            <div class="archive-stat-content">
+
+                <span>
+                    AIFSA MEMORY
+                </span>
+
+                <strong>
+                    ∞
+                </strong>
+
+                <p>
+                    Every gathering, every woman, every milestone
+                    and every contribution becomes part of the
+                    association's institutional memory.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARCHIVED EVENTS
+===================================================== -->
+
+<section class="archive-list-section section">
+
+    <div class="container">
+
+
+        <div class="archive-toolbar">
+
+            <div>
+
+                <span class="section-tag">
+                    EVENT HISTORY
+                </span>
+
+                <h2>
+                    Browse the archive
+                </h2>
+
+            </div>
+
+
+            <div class="archive-filter">
+
+                <label for="yearFilter">
+                    Filter by year
+                </label>
+
+                <select id="yearFilter">
+
+                    <option value="all">
+                        All years
+                    </option>
+
+                    <option value="2026">
+                        2026
+                    </option>
+
+                    <option value="2025">
+                        2025
+                    </option>
+
+                    <option value="2024">
+                        2024
+                    </option>
+
+                    <option value="2023">
+                        2023
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="archive-grid" id="archiveGrid">
+
+
+            <!-- =================================================
+                 EVENT 01
+            ================================================= -->
+
+            <article
+                class="archive-card"
+                data-year="2026">
+
+
+                <div class="archive-image">
+
+                    <div class="archive-image-content">
+
+                        <span class="archive-year">
+                            2026
+                        </span>
+
+                        <span>
+                            AIFSA EVENT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="archive-content">
+
+                    <div class="archive-meta">
+
+                        <span class="archive-category">
+                            FEATURED EVENT
+                        </span>
+
+                        <span class="archive-date">
+                            DATE TO BE ADDED
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        AIFSA Event
+                    </h3>
+
+
+                    <div class="archive-theme">
+                        EVENT THEME TO BE ADDED
+                    </div>
+
+
+                    <p>
+                        The official report, photographs, highlights
+                        and key moments from this AIFSA event will be
+                        preserved here.
+                    </p>
+
+
+                    <div class="archive-highlights">
+
+                        <span class="archive-highlight">
+                            Leadership
+                        </span>
+
+                        <span class="archive-highlight">
+                            Sisterhood
+                        </span>
+
+                        <span class="archive-highlight">
+                            Community
+                        </span>
+
+                    </div>
+
+
+                    <div class="archive-links">
+
+                        <a
+                            href="gallery.html"
+                            class="archive-link">
+
+                            View photographs →
+
+                        </a>
+
+                        <a
+                            href="#"
+                            class="archive-link">
+
+                            Read event report →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 EVENT 02
+            ================================================= -->
+
+            <article
+                class="archive-card"
+                data-year="2026">
+
+
+                <div class="archive-image archive-image-orange">
+
+                    <div class="archive-image-content">
+
+                        <span class="archive-year">
+                            2026
+                        </span>
+
+                        <span>
+                            AIFSA PROGRAMME
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="archive-content">
+
+                    <div class="archive-meta">
+
+                        <span class="archive-category">
+                            PROGRAMME
+                        </span>
+
+                        <span class="archive-date">
+                            DATE TO BE ADDED
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        AIFSA Programme & Initiative
+                    </h3>
+
+
+                    <div class="archive-theme">
+                        THEME TO BE ADDED
+                    </div>
+
+
+                    <p>
+                        A record of an AIFSA programme, initiative
+                        or community activity. Event details,
+                        speakers, outcomes and photographs can be
+                        added here.
+                    </p>
+
+
+                    <div class="archive-highlights">
+
+                        <span class="archive-highlight">
+                            Education
+                        </span>
+
+                        <span class="archive-highlight">
+                            Empowerment
+                        </span>
+
+                        <span class="archive-highlight">
+                            Impact
+                        </span>
+
+                    </div>
+
+
+                    <div class="archive-links">
+
+                        <a
+                            href="gallery.html"
+                            class="archive-link">
+
+                            View photographs →
+
+                        </a>
+
+                        <a
+                            href="#"
+                            class="archive-link">
+
+                            Read highlights →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 EVENT 03
+            ================================================= -->
+
+            <article
+                class="archive-card"
+                data-year="2025">
+
+
+                <div class="archive-image archive-image-dark">
+
+                    <div class="archive-image-content">
+
+                        <span class="archive-year">
+                            2025
+                        </span>
+
+                        <span>
+                            AIFSA EVENT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="archive-content">
+
+                    <div class="archive-meta">
+
+                        <span class="archive-category">
+                            ARCHIVED
+                        </span>
+
+                        <span class="archive-date">
+                            DATE TO BE ADDED
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Previous AIFSA Event
+                    </h3>
+
+
+                    <div class="archive-theme">
+                        EVENT THEME TO BE ADDED
+                    </div>
+
+
+                    <p>
+                        Historical event information will be
+                        published here, including the programme,
+                        speakers, important messages, photographs
+                        and memorable moments.
+                    </p>
+
+
+                    <div class="archive-highlights">
+
+                        <span class="archive-highlight">
+                            AIFSA
+                        </span>
+
+                        <span class="archive-highlight">
+                            Women
+                        </span>
+
+                        <span class="archive-highlight">
+                            Community
+                        </span>
+
+                    </div>
+
+
+                    <div class="archive-links">
+
+                        <a
+                            href="gallery.html"
+                            class="archive-link">
+
+                            View photographs →
+
+                        </a>
+
+                        <a
+                            href="#"
+                            class="archive-link">
+
+                            Read report →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 EVENT 04
+            ================================================= -->
+
+            <article
+                class="archive-card"
+                data-year="2024">
+
+
+                <div class="archive-image archive-image-gold">
+
+                    <div class="archive-image-content">
+
+                        <span class="archive-year">
+                            2024
+                        </span>
+
+                        <span>
+                            AIFSA EVENT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="archive-content">
+
+                    <div class="archive-meta">
+
+                        <span class="archive-category">
+                            ARCHIVED
+                        </span>
+
+                        <span class="archive-date">
+                            DATE TO BE ADDED
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        AIFSA Historical Event
+                    </h3>
+
+
+                    <div class="archive-theme">
+                        EVENT THEME TO BE ADDED
+                    </div>
+
+
+                    <p>
+                        This space preserves the history of previous
+                        AIFSA activities and can be expanded with
+                        verified historical information as records
+                        become available.
+                    </p>
+
+
+                    <div class="archive-highlights">
+
+                        <span class="archive-highlight">
+                            History
+                        </span>
+
+                        <span class="archive-highlight">
+                            Unity
+                        </span>
+
+                        <span class="archive-highlight">
+                            Legacy
+                        </span>
+
+                    </div>
+
+
+                    <div class="archive-links">
+
+                        <a
+                            href="gallery.html"
+                            class="archive-link">
+
+                            View photographs →
+
+                        </a>
+
+                        <a
+                            href="#"
+                            class="archive-link">
+
+                            Read history →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURED MEMORY
+===================================================== -->
+
+<section class="memory-section section">
+
+    <div class="container">
+
+        <div class="memory-box">
+
+            <div class="memory-content">
+
+                <span class="section-tag light">
+                    PRESERVING OUR VOICES
+                </span>
+
+                <h2>
+                    More than photographs.
+                    <em>Our voices matter.</em>
+                </h2>
+
+                <p>
+                    AIFSA's archive can preserve keynote speeches,
+                    presidential addresses, welcome remarks,
+                    important statements, event reports, poems,
+                    reflections and words from members.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HISTORICAL TIMELINE
+===================================================== -->
+
+<section class="timeline-section section">
+
+    <div class="container">
+
+
+        <div class="center-heading">
+
+            <span class="section-tag">
+                AIFSA TIMELINE
+            </span>
+
+            <h2>
+                Building a
+                <em>legacy.</em>
+            </h2>
+
+            <p>
+                Major milestones in the story of AIFSA can be
+                documented here as the association's history grows.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2026
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        AIFSA Worldwide
+                    </h3>
+
+                    <p>
+                        Current programmes, leadership initiatives,
+                        events and milestones can be recorded here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2025
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        AIFSA Milestone
+                    </h3>
+
+                    <p>
+                        Historical milestones and important events
+                        from this year can be added once verified
+                        records are available.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2024
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        AIFSA History
+                    </h3>
+
+                    <p>
+                        Earlier milestones, programmes and leadership
+                        transitions can be preserved here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="archive-cta section">
+
+    <div class="container">
+
+        <div class="archive-cta-box">
+
+            <span class="section-tag">
+                KEEP THE STORY ALIVE
+            </span>
+
+            <h2>
+                Every memory deserves
+                <em>a place.</em>
+            </h2>
+
+            <p>
+                Explore upcoming AIFSA events, contribute to the
+                association's history and stay connected with
+                programmes happening across the AIFSA community.
+            </p>
+
+            <a
+                href="events.html"
+                class="btn btn-primary">
+
+                Explore Upcoming Events →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html#home"
+                    class="logo footer-logo">
+
+                    <span class="logo-mark">
+                        A
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>AIFSA</strong>
+                        <small>WORLDWIDE</small>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Akwa Ibom Female Students Association.
+                    A community committed to the value of womanhood.
+                </p>
+
+
+                <strong class="footer-motto">
+                    THE VALUE OF WOMANHOOD.
+                </strong>
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
+                    <a href="../index.html#home">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About AIFSA
+                    </a>
+
+                    <a href="leadership.html">
+                        Leadership
+                    </a>
+
+                    <a href="chapters.html">
+                        Chapters
+                    </a>
+
+                    <a href="events.html">
+                        Events
+                    </a>
+
+                    <a href="events-archive.html">
+                        Events Archive
+                    </a>
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+                    <a href="constitution.html">
+                        Constitution
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        CONNECT
+                    </h4>
+
+                    <a href="../index.html#news">
+                        News
+                    </a>
+
+                    <a href="register.html">
+                        Membership
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="currentYear"></span>
+                AIFSA Worldwide. All rights reserved.
+            </span>
+
+            <span>
+                Akwa Ibom Female Students Association
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../app.js"></script>
+
+<script>
+
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    const yearElement =
+        document.getElementById("currentYear");
+
+    if (yearElement) {
+
+        yearElement.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                navMenu.classList.toggle("active");
+
+                menuToggle.classList.toggle("active");
+
+            }
+        );
+
+
+        const navLinks =
+            navMenu.querySelectorAll("a");
+
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    navMenu.classList.remove("active");
+
+                    menuToggle.classList.remove("active");
+
+                }
+            );
+
+        });
+
+    }
+
+
+    /* =====================================================
+       YEAR FILTER
+    ===================================================== */
+
+    const yearFilter =
+        document.getElementById("yearFilter");
+
+    const archiveCards =
+        document.querySelectorAll(".archive-card");
+
+
+    if (yearFilter) {
+
+        yearFilter.addEventListener(
+            "change",
+            function () {
+
+                const selectedYear =
+                    this.value;
+
+
+                archiveCards.forEach(
+                    function (card) {
+
+                        const cardYear =
+                            card.getAttribute("data-year");
+
+
+                        if (
+                            selectedYear === "all" ||
+                            cardYear === selectedYear
+                        ) {
+
+                            card.style.display = "grid";
+
+                        } else {
+
+                            card.style.display = "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+</script>
+
+
+</body>
+</html>

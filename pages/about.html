@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About AIFSA | Akwa Ibom Female Students Association</title>
+
+    <meta name="description"
+        content="Learn about AIFSA Worldwide, the Akwa Ibom Female Students Association, its vision, mission, values and commitment to the advancement of young women.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* =====================================================
+           ABOUT PAGE
+        ===================================================== */
+
+        .about-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 0 100px;
+            background: #f8f6f0;
+        }
+
+        .about-hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: rgba(18, 88, 62, 0.08);
+            top: -180px;
+            right: -100px;
+        }
+
+        .about-hero::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(221, 107, 39, 0.08);
+            bottom: -100px;
+            left: -80px;
+        }
+
+        .about-hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb a {
+            color: #12583e;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: #999;
+        }
+
+        .about-hero h1 {
+            max-width: 850px;
+            margin: 0 0 25px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1.02;
+            color: #18352a;
+        }
+
+        .about-hero h1 em {
+            color: #12583e;
+        }
+
+        .about-hero-description {
+            max-width: 700px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #626262;
+        }
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .about-introduction {
+            background: #ffffff;
+        }
+
+        .about-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-intro-visual {
+            min-height: 470px;
+            position: relative;
+        }
+
+        .about-brand-card {
+            width: 82%;
+            min-height: 430px;
+            padding: 55px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #12583e;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-brand-card::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+        }
+
+        .about-brand-card::after {
+            content: "";
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50%;
+        }
+
+        .about-brand-symbol {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 25px;
+            font-size: 34px;
+        }
+
+        .about-brand-card > span:not(.about-brand-symbol) {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 12px;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 4px;
+        }
+
+        .about-brand-card strong {
+            position: relative;
+            z-index: 2;
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            line-height: 1.35;
+        }
+
+        .about-brand-card small {
+            position: relative;
+            z-index: 2;
+            margin-top: 25px;
+            font-size: 10px;
+            line-height: 1.8;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .about-accent {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 30%;
+            height: 55%;
+            background: #d96f2c;
+            z-index: 0;
+        }
+
+        .about-intro-content .section-tag {
+            margin-bottom: 18px;
+        }
+
+        .about-intro-content h2 {
+            margin: 0 0 22px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(35px, 4vw, 52px);
+            line-height: 1.15;
+            color: #18352a;
+        }
+
+        .about-intro-content h2 em {
+            color: #12583e;
+        }
+
+        .about-intro-content p {
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        /* =====================================================
+           VISION & MISSION
+        ===================================================== */
+
+        .vision-mission {
+            background: #f8f6f0;
+        }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .vm-card {
+            padding: 50px;
+            background: #fff;
+            border: 1px solid rgba(18, 88, 62, 0.08);
+            position: relative;
+        }
+
+        .vm-card.green {
+            background: #12583e;
+            color: #fff;
+        }
+
+        .vm-number {
+            display: block;
+            margin-bottom: 30px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            opacity: 0.65;
+        }
+
+        .vm-card h3 {
+            margin: 0 0 18px;
+            font-family: "Playfair Display", serif;
+            font-size: 34px;
+        }
+
+        .vm-card p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .vm-card.green p {
+            color: rgba(255,255,255,0.82);
+        }
+
+        /* =====================================================
+           VALUES
+        ===================================================== */
+
+        .values-section {
+            background: #fff;
+        }
+
+        .values-heading {
+            max-width: 650px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .values-heading h2 {
+            margin: 15px 0;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(35px, 5vw, 52px);
+            color: #18352a;
+        }
+
+        .values-heading h2 em {
+            color: #12583e;
+        }
+
+        .values-heading p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .value-card {
+            padding: 35px 28px;
+            background: #f8f6f0;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .value-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #12583e;
+            color: #fff;
+            font-size: 19px;
+        }
+
+        .value-card:nth-child(even) .value-icon {
+            background: #d96f2c;
+        }
+
+        .value-card h3 {
+            margin: 0 0 12px;
+            color: #18352a;
+            font-size: 20px;
+        }
+
+        .value-card p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        /* =====================================================
+           OBJECTIVES
+        ===================================================== */
+
+        .objectives-section {
+            background: #12583e;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .objectives-section::after {
+            content: "AIFSA";
+            position: absolute;
+            right: -50px;
+            bottom: -80px;
+            font-family: "Playfair Display", serif;
+            font-size: 190px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.04);
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .objectives-heading .section-tag {
+            color: #fff;
+        }
+
+        .objectives-heading h2 {
+            margin: 15px 0 20px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1.1;
+        }
+
+        .objectives-heading h2 em {
+            color: #f0a26e;
+        }
+
+        .objectives-heading p {
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+        }
+
+        .objectives-list {
+            display: grid;
+            gap: 0;
+        }
+
+        .objective-item {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+            gap: 20px;
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .objective-item:first-child {
+            padding-top: 0;
+        }
+
+        .objective-number {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            color: #f0a26e;
+        }
+
+        .objective-item h3 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+
+        .objective-item p {
+            margin: 0;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* =====================================================
+           WOMANHOOD
+        ===================================================== */
+
+        .womanhood-section {
+            background: #f8f6f0;
+            text-align: center;
+        }
+
+        .womanhood-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .womanhood-container h2 {
+            margin: 20px 0;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.1;
+            color: #18352a;
+        }
+
+        .womanhood-container h2 em {
+            color: #12583e;
+        }
+
+        .womanhood-container p {
+            max-width: 650px;
+            margin: auto;
+            color: #666;
+            line-height: 1.9;
+            font-size: 17px;
+        }
+
+        /* =====================================================
+           CONSTITUTION CTA
+        ===================================================== */
+
+        .constitution-cta {
+            background: #fff;
+        }
+
+        .constitution-box {
+            padding: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: #f8f6f0;
+            border-left: 5px solid #12583e;
+        }
+
+        .constitution-box h3 {
+            margin: 0 0 10px;
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            color: #18352a;
+        }
+
+        .constitution-box p {
+            max-width: 650px;
+            margin: 0;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .constitution-box .btn {
+            flex-shrink: 0;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .about-intro-grid,
+            .objectives-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .about-intro-visual {
+                max-width: 600px;
+                margin: auto;
+                width: 100%;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .about-hero {
+                padding: 125px 0 75px;
+            }
+
+            .vm-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vm-card {
+                padding: 35px 28px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .constitution-box {
+                padding: 35px 25px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .about-brand-card {
+                width: 85%;
+                min-height: 380px;
+            }
+
+            .about-intro-visual {
+                min-height: 410px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .about-hero h1 {
+                font-size: 46px;
+            }
+
+            .about-hero-description {
+                font-size: 15px;
+            }
+
+            .about-brand-card {
+                width: 88%;
+                padding: 35px 20px;
+            }
+
+            .about-brand-card strong {
+                font-size: 22px;
+            }
+
+            .objective-item {
+                grid-template-columns: 40px 1fr;
+                gap: 12px;
+            }
+
+            .constitution-box h3 {
+                font-size: 26px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html#home" class="logo">
+
+            <span class="logo-mark">A</span>
+
+            <span class="logo-text">
+                <strong>AIFSA</strong>
+                <small>WORLDWIDE</small>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="../index.html#home" class="nav-link">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link active">
+                About
+            </a>
+
+            <a href="leadership.html" class="nav-link">
+                Leadership
+            </a>
+
+            <a href="../index.html#chapters" class="nav-link">
+                Chapters
+            </a>
+
+            <a href="events.html" class="nav-link">
+                Events
+            </a>
+
+            <a href="gallery.html" class="nav-link">
+                Gallery
+            </a>
+
+            <a href="constitution.html" class="nav-link">
+                Constitution
+            </a>
+
+            <a href="../index.html#news" class="nav-link">
+                News
+            </a>
+
+            <a href="register.html" class="nav-join">
+                Join AIFSA
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="about-hero">
+
+    <div class="container about-hero-container">
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <span>→</span>
+
+            <span>About AIFSA</span>
+
+        </div>
+
+
+        <span class="section-tag">
+            ABOUT AIFSA WORLDWIDE
+        </span>
+
+
+        <h1>
+            A community built
+            around the value of
+            <em>womanhood.</em>
+        </h1>
+
+
+        <p class="about-hero-description">
+            The Akwa Ibom Female Students Association is a community
+            dedicated to bringing female students together through
+            unity, leadership, education, excellence, opportunity
+            and meaningful service.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="about-introduction section">
+
+    <div class="container about-intro-grid">
+
+        <div class="about-intro-visual">
+
+            <div class="about-brand-card">
+
+                <span class="about-brand-symbol">
+                    ✦
+                </span>
+
+                <span>
+                    AIFSA WORLDWIDE
+                </span>
+
+                <strong>
+                    THE VALUE OF
+                    <br>
+                    WOMANHOOD
+                </strong>
+
+                <small>
+                    AKWA IBOM FEMALE
+                    <br>
+                    STUDENTS ASSOCIATION
+                </small>
+
+            </div>
+
+            <div class="about-accent"></div>
+
+        </div>
+
+
+        <div class="about-intro-content">
+
+            <span class="section-tag">
+                WHO WE ARE
+            </span>
+
+            <h2>
+                More than an association.
+                <em>A sisterhood.</em>
+            </h2>
+
+            <p>
+                AIFSA Worldwide is the Akwa Ibom Female Students
+                Association, a community created to connect,
+                empower and support female students of Akwa Ibom
+                origin across institutions and communities.
+            </p>
+
+            <p>
+                We believe that the journey of a young woman should
+                not be walked alone. Through sisterhood, mentorship,
+                leadership development, educational initiatives,
+                networking and service, AIFSA creates an environment
+                where women can discover their potential and use it
+                purposefully.
+            </p>
+
+            <p>
+                Our association seeks to build a generation of
+                confident, educated, responsible and purpose-driven
+                women who can contribute meaningfully to their
+                families, communities, professions and society.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VISION & MISSION
+===================================================== -->
+
+<section class="vision-mission section">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <span class="section-tag">
+                OUR DIRECTION
+            </span>
+
+            <h2>
+                What we
+                <em>stand for.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="vm-grid">
+
+            <article class="vm-card green">
+
+                <span class="vm-number">
+                    01 / OUR VISION
+                </span>
+
+                <h3>
+                    A generation of empowered women.
+                </h3>
+
+                <p>
+                    To build a united and empowered community of
+                    Akwa Ibom female students who are equipped with
+                    the knowledge, confidence, character and
+                    opportunities to excel and make meaningful impact.
+                </p>
+
+            </article>
+
+
+            <article class="vm-card">
+
+                <span class="vm-number">
+                    02 / OUR MISSION
+                </span>
+
+                <h3>
+                    Connect. Empower. Inspire.
+                </h3>
+
+                <p>
+                    To create platforms for education, leadership,
+                    mentorship, networking, personal development,
+                    opportunity and service while strengthening
+                    sisterhood among Akwa Ibom female students.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CORE VALUES
+===================================================== -->
+
+<section class="values-section section">
+
+    <div class="container">
+
+        <div class="values-heading">
+
+            <span class="section-tag">
+                OUR CORE VALUES
+            </span>
+
+            <h2>
+                The principles that
+                <em>guide us.</em>
+            </h2>
+
+            <p>
+                Our values shape how we serve our members,
+                build relationships and pursue the advancement
+                of young women.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+            <article class="value-card">
+
+                <div class="value-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Unity
+                </h3>
+
+                <p>
+                    We believe that our collective strength grows
+                    when women support, celebrate and stand for
+                    one another.
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <div class="value-icon">
+                    ♕
+                </div>
+
+                <h3>
+                    Leadership
+                </h3>
+
+                <p>
+                    We encourage women to develop the confidence,
+                    competence and character required to lead.
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <div class="value-icon">
+                    ◆
+                </div>
+
+                <h3>
+                    Excellence
+                </h3>
+
+                <p>
+                    We encourage academic, personal and professional
+                    growth and challenge our members to pursue excellence.
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <div class="value-icon">
+                    ♥
+                </div>
+
+                <h3>
+                    Service
+                </h3>
+
+                <p>
+                    We believe leadership is strengthened when
+                    knowledge, talent and opportunity are used
+                    to positively impact others.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OBJECTIVES
+===================================================== -->
+
+<section class="objectives-section section">
+
+    <div class="container objectives-grid">
+
+        <div class="objectives-heading">
+
+            <span class="section-tag">
+                OUR OBJECTIVES
+            </span>
+
+            <h2>
+                Turning values
+                into <em>action.</em>
+            </h2>
+
+            <p>
+                AIFSA exists to create practical opportunities
+                through which young women can learn, connect,
+                develop and contribute.
+            </p>
+
+        </div>
+
+
+        <div class="objectives-list">
+
+            <article class="objective-item">
+
+                <span class="objective-number">
+                    01
+                </span>
+
+                <div>
+
+                    <h3>
+                        Promote Educational Development
+                    </h3>
+
+                    <p>
+                        Encourage academic growth and provide
+                        platforms for learning, knowledge sharing
+                        and educational advancement.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="objective-item">
+
+                <span class="objective-number">
+                    02
+                </span>
+
+                <div>
+
+                    <h3>
+                        Develop Future Leaders
+                    </h3>
+
+                    <p>
+                        Equip members with leadership skills,
+                        confidence and opportunities to take
+                        responsibility and make an impact.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="objective-item">
+
+                <span class="objective-number">
+                    03
+                </span>
+
+                <div>
+
+                    <h3>
+                        Build Meaningful Networks
+                    </h3>
+
+                    <p>
+                        Connect female students across institutions
+                        and create relationships that foster collaboration,
+                        mentorship and opportunity.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="objective-item">
+
+                <span class="objective-number">
+                    04
+                </span>
+
+                <div>
+
+                    <h3>
+                        Promote Personal & Professional Growth
+                    </h3>
+
+                    <p>
+                        Expose members to skills, resources,
+                        opportunities and experiences that prepare
+                        them for life beyond the classroom.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="objective-item">
+
+                <span class="objective-number">
+                    05
+                </span>
+
+                <div>
+
+                    <h3>
+                        Strengthen Sisterhood
+                    </h3>
+
+                    <p>
+                        Create a supportive community where women
+                        can encourage one another and grow together.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="objective-item">
+
+                <span class="objective-number">
+                    06
+                </span>
+
+                <div>
+
+                    <h3>
+                        Encourage Community Service
+                    </h3>
+
+                    <p>
+                        Inspire members to contribute their talents,
+                        resources and knowledge towards meaningful
+                        community development.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WOMANHOOD
+===================================================== -->
+
+<section class="womanhood-section section">
+
+    <div class="container womanhood-container">
+
+        <span class="section-tag">
+            THE AIFSA PHILOSOPHY
+        </span>
+
+        <h2>
+            Every woman carries
+            <em>value.</em>
+        </h2>
+
+        <p>
+            We believe womanhood is not defined by limitation,
+            but by possibility. It is the ability to learn,
+            lead, build, nurture, innovate, serve and create
+            meaningful change.
+        </p>
+
+        <p style="margin-top:20px;">
+            Through AIFSA, we seek to remind every member that
+            her voice matters, her dreams are valid, her education
+            is valuable and her contribution can shape the future.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONSTITUTION CTA
+===================================================== -->
+
+<section class="constitution-cta section">
+
+    <div class="container">
+
+        <div class="constitution-box">
+
+            <div>
+
+                <span class="section-tag">
+                    OFFICIAL DOCUMENT
+                </span>
+
+                <h3>
+                    Read the AIFSA Constitution
+                </h3>
+
+                <p>
+                    Explore the official constitution governing
+                    the structure, principles, responsibilities
+                    and administration of the Akwa Ibom Female
+                    Students Association.
+                </p>
+
+            </div>
+
+
+            <a
+                href="constitution.html"
+                class="btn btn-primary">
+
+                View Constitution →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html#home"
+                    class="logo footer-logo">
+
+                    <span class="logo-mark">
+                        A
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>AIFSA</strong>
+                        <small>WORLDWIDE</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Akwa Ibom Female Students Association.
+                    A community committed to the value of womanhood.
+                </p>
+
+                <strong class="footer-motto">
+                    THE VALUE OF WOMANHOOD.
+                </strong>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <h4>EXPLORE</h4>
+
+                    <a href="about.html">
+                        About AIFSA
+                    </a>
+
+                    <a href="leadership.html">
+                        Leadership
+                    </a>
+
+                    <a href="../index.html#chapters">
+                        Chapters
+                    </a>
+
+                    <a href="events.html">
+                        Events
+                    </a>
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+                    <a href="constitution.html">
+                        Constitution
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>CONNECT</h4>
+
+                    <a href="../index.html#news">
+                        News
+                    </a>
+
+                    <a href="event-archive.html">
+                        Event Archive
+                    </a>
+
+                    <a href="register.html">
+                        Membership
+                    </a>
+
+                    <a href="#">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="currentYear"></span>
+                AIFSA Worldwide. All rights reserved.
+            </span>
+
+            <span>
+                Akwa Ibom Female Students Association
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../app.js"></script>
+
+<script>
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    const yearElement = document.getElementById("currentYear");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+       Works with the existing AIFSA app.js
+    ===================================================== */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+
+        });
+
+
+        const navLinks = navMenu.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navMenu.classList.remove("active");
+                menuToggle.classList.remove("active");
+
+            });
+
+        });
+
+    }
+</script>
+
+</body>
+</html>

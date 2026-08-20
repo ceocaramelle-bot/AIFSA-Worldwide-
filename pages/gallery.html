@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | AIFSA Worldwide</title>
+
+    <meta name="description"
+        content="Explore the official AIFSA Worldwide gallery featuring events, leadership, sisterhood, programmes and memorable moments from the Akwa Ibom Female Students Association.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+
+    <style>
+
+        /* =====================================================
+           GALLERY HERO
+        ===================================================== */
+
+        .gallery-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 0 105px;
+            background: #18352a;
+            color: #fff;
+        }
+
+        .gallery-hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255,255,255,.09);
+            border-radius: 50%;
+            right: -180px;
+            top: -220px;
+        }
+
+        .gallery-hero::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(255,255,255,.06);
+            border-radius: 50%;
+            left: -150px;
+            bottom: -180px;
+        }
+
+        .gallery-hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1050px;
+        }
+
+        .gallery-hero .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .gallery-hero .breadcrumb a {
+            color: #f0a26e;
+            text-decoration: none;
+        }
+
+        .gallery-hero .breadcrumb span {
+            color: rgba(255,255,255,.4);
+        }
+
+        .gallery-hero h1 {
+            max-width: 800px;
+            margin: 0 0 25px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(50px, 7vw, 82px);
+            line-height: 1.02;
+        }
+
+        .gallery-hero h1 em {
+            color: #f0a26e;
+        }
+
+        .gallery-hero-description {
+            max-width: 700px;
+            color: rgba(255,255,255,.7);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           GALLERY INTRO
+        ===================================================== */
+
+        .gallery-intro {
+            background: #fff;
+        }
+
+        .gallery-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .gallery-intro-content h2 {
+            margin: 15px 0 20px;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 5vw, 55px);
+            line-height: 1.1;
+        }
+
+        .gallery-intro-content h2 em {
+            color: #12583e;
+        }
+
+        .gallery-intro-content p {
+            color: #666;
+            line-height: 1.85;
+        }
+
+        .gallery-intro-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 330px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #12583e;
+            color: #fff;
+        }
+
+        .gallery-intro-card::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 50%;
+        }
+
+        .gallery-intro-card::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 50%;
+        }
+
+        .gallery-intro-symbol {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .gallery-intro-symbol span {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 35px;
+        }
+
+        .gallery-intro-symbol strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 35px;
+        }
+
+        .gallery-intro-symbol small {
+            display: block;
+            margin-top: 10px;
+            color: rgba(255,255,255,.6);
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           FILTER BAR
+        ===================================================== */
+
+        .gallery-section {
+            background: #f8f6f0;
+        }
+
+        .gallery-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
+        .gallery-toolbar h2 {
+            margin: 12px 0 0;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+        }
+
+        .gallery-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            padding: 10px 15px;
+            border: 1px solid #ddd8ce;
+            background: #fff;
+            color: #666;
+            font-family: "DM Sans", sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .8px;
+            cursor: pointer;
+            transition: .25s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: #12583e;
+            background: #12583e;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           FEATURED GALLERY
+        ===================================================== */
+
+        .featured-gallery {
+            display: grid;
+            grid-template-columns: 1.35fr .65fr;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .featured-photo {
+            position: relative;
+            min-height: 500px;
+            overflow: hidden;
+            background: #18352a;
+        }
+
+        .featured-photo img {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .featured-photo-placeholder {
+            height: 100%;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                linear-gradient(
+                    135deg,
+                    #12583e,
+                    #18352a
+                );
+            color: rgba(255,255,255,.7);
+            text-align: center;
+        }
+
+        .placeholder-inner span {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 40px;
+        }
+
+        .placeholder-inner strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .placeholder-inner small {
+            display: block;
+            margin-top: 8px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .featured-photo-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 35px 30px 28px;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.85)
+            );
+            color: #fff;
+        }
+
+        .featured-photo-overlay span {
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .featured-photo-overlay h3 {
+            margin: 8px 0 0;
+            font-family: "Playfair Display", serif;
+            font-size: 29px;
+        }
+
+        .featured-side {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .small-feature {
+            position: relative;
+            min-height: 242px;
+            overflow: hidden;
+            background: #d96f2c;
+        }
+
+        .small-feature:nth-child(2) {
+            background: #9b7134;
+        }
+
+        .small-feature img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .small-feature-placeholder {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,.8);
+            text-align: center;
+        }
+
+        .small-feature-placeholder span {
+            font-size: 28px;
+        }
+
+        .small-feature-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 35px 20px 18px;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.8)
+            );
+            color: #fff;
+        }
+
+        .small-feature-overlay span {
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .small-feature-overlay h4 {
+            margin: 5px 0 0;
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           PHOTO GRID
+        ===================================================== */
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .photo-card {
+            position: relative;
+            min-height: 300px;
+            overflow: hidden;
+            background: #e8e4dc;
+            cursor: pointer;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            display: block;
+            object-fit: cover;
+            transition: transform .45s ease;
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-placeholder {
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #12583e;
+            color: rgba(255,255,255,.75);
+            text-align: center;
+        }
+
+        .photo-card:nth-child(2n) .photo-placeholder {
+            background: #d96f2c;
+        }
+
+        .photo-card:nth-child(3n) .photo-placeholder {
+            background: #18352a;
+        }
+
+        .photo-placeholder span {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .photo-placeholder small {
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .photo-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 35px 20px 18px;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.82)
+            );
+            color: #fff;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: .3s ease;
+        }
+
+        .photo-card:hover .photo-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .photo-overlay span {
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .photo-overlay h3 {
+            margin: 5px 0 0;
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           GALLERY EMPTY STATE
+        ===================================================== */
+
+        .gallery-empty {
+            display: none;
+            padding: 70px 25px;
+            border: 1px dashed #d5d0c7;
+            background: #fff;
+            text-align: center;
+        }
+
+        .gallery-empty span {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 35px;
+        }
+
+        .gallery-empty h3 {
+            margin-bottom: 10px;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+        }
+
+        .gallery-empty p {
+            color: #777;
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           MEMORY CTA
+        ===================================================== */
+
+        .gallery-memory {
+            background: #fff;
+        }
+
+        .gallery-memory-box {
+            position: relative;
+            overflow: hidden;
+            padding: 75px 35px;
+            background: #f8f6f0;
+            border: 1px solid #e4e0d7;
+            text-align: center;
+        }
+
+        .gallery-memory-box h2 {
+            max-width: 700px;
+            margin: 15px auto 20px;
+            color: #18352a;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 5vw, 55px);
+            line-height: 1.1;
+        }
+
+        .gallery-memory-box h2 em {
+            color: #12583e;
+        }
+
+        .gallery-memory-box p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #777;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           LIGHTBOX
+        ===================================================== */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: rgba(0,0,0,.93);
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-image {
+            max-width: 92vw;
+            max-height: 82vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,.1);
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            left: 50%;
+            bottom: 25px;
+            transform: translateX(-50%);
+            width: 90%;
+            color: rgba(255,255,255,.8);
+            text-align: center;
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .gallery-intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-side {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 250px;
+            }
+
+            .small-feature {
+                min-height: 250px;
+            }
+
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .gallery-hero {
+                padding: 125px 0 75px;
+            }
+
+            .gallery-toolbar {
+                display: block;
+            }
+
+            .gallery-filter {
+                margin-top: 25px;
+            }
+
+            .featured-side {
+                grid-template-columns: 1fr;
+                grid-template-rows: 250px 250px;
+            }
+
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-overlay {
+                opacity: 1;
+                transform: none;
+            }
+
+            .gallery-memory-box {
+                padding: 55px 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+
+        <a href="../index.html#home" class="logo">
+
+            <span class="logo-mark">
+                A
+            </span>
+
+            <span class="logo-text">
+                <strong>AIFSA</strong>
+                <small>WORLDWIDE</small>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="../index.html#home" class="nav-link">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="leadership.html" class="nav-link">
+                Leadership
+            </a>
+
+            <a href="chapters.html" class="nav-link">
+                Chapters
+            </a>
+
+            <a href="events.html" class="nav-link">
+                Events
+            </a>
+
+            <a href="events-archive.html" class="nav-link">
+                Archive
+            </a>
+
+            <a href="gallery.html" class="nav-link active">
+                Gallery
+            </a>
+
+            <a href="constitution.html" class="nav-link">
+                Constitution
+            </a>
+
+            <a href="../index.html#news" class="nav-link">
+                News
+            </a>
+
+            <a href="register.html" class="nav-join">
+                Join AIFSA
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="gallery-hero">
+
+    <div class="container gallery-hero-container">
+
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <span>→</span>
+
+            <span>
+                Gallery
+            </span>
+
+        </div>
+
+
+        <span class="section-tag light">
+            AIFSA GALLERY
+        </span>
+
+
+        <h1>
+            Moments worth
+            <em>remembering.</em>
+        </h1>
+
+
+        <p class="gallery-hero-description">
+            Explore the people, programmes, celebrations and
+            milestones that make up the story of the Akwa Ibom
+            Female Students Association.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="gallery-intro section">
+
+    <div class="container gallery-intro-grid">
+
+
+        <div class="gallery-intro-content">
+
+            <span class="section-tag">
+                OUR MEMORIES
+            </span>
+
+            <h2>
+                A picture can preserve
+                <em>a moment forever.</em>
+            </h2>
+
+            <p>
+                The AIFSA Gallery is a visual record of our
+                association's journey. From conferences and
+                leadership programmes to sisterhood gatherings,
+                community projects and celebrations.
+            </p>
+
+            <p>
+                As AIFSA continues to grow, this gallery will grow
+                with it — giving future members a chance to see the
+                women, moments and milestones that came before them.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-intro-card">
+
+            <div class="gallery-intro-symbol">
+
+                <span>
+                    ✦
+                </span>
+
+                <strong>
+                    AIFSA
+                </strong>
+
+                <small>
+                    THE VALUE OF WOMANHOOD
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery-section section">
+
+    <div class="container">
+
+
+        <div class="gallery-toolbar">
+
+            <div>
+
+                <span class="section-tag">
+                    VISUAL ARCHIVE
+                </span>
+
+                <h2>
+                    Explore our moments
+                </h2>
+
+            </div>
+
+
+            <div class="gallery-filter">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all">
+
+                    All
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="events">
+
+                    Events
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="leadership">
+
+                    Leadership
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="community">
+
+                    Community
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="sisterhood">
+
+                    Sisterhood
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FEATURED GALLERY
+        ================================================= -->
+
+        <div class="featured-gallery">
+
+
+            <div
+                class="featured-photo"
+                data-category="events">
+
+
+                <!--
+                    TO ADD A REAL IMAGE:
+
+                    Replace this entire placeholder with:
+
+                    <img
+                        src="../assets/images/event-photo.jpg"
+                        alt="Description of photograph">
+                -->
+
+                <div class="featured-photo-placeholder">
+
+                    <div class="placeholder-inner">
+
+                        <span>
+                            📷
+                        </span>
+
+                        <strong>
+                            AIFSA Event
+                        </strong>
+
+                        <small>
+                            PHOTO TO BE ADDED
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="featured-photo-overlay">
+
+                    <span>
+                        FEATURED MEMORY • EVENTS
+                    </span>
+
+                    <h3>
+                        Moments from AIFSA
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="featured-side">
+
+
+                <div
+                    class="small-feature"
+                    data-category="leadership">
+
+                    <div class="small-feature-placeholder">
+
+                        <span>
+                            👩🏽‍💼
+                        </span>
+
+                    </div>
+
+                    <div class="small-feature-overlay">
+
+                        <span>
+                            LEADERSHIP
+                        </span>
+
+                        <h4>
+                            Women who lead.
+                        </h4>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="small-feature"
+                    data-category="sisterhood">
+
+                    <div class="small-feature-placeholder">
+
+                        <span>
+                            ♥
+                        </span>
+
+                    </div>
+
+                    <div class="small-feature-overlay">
+
+                        <span>
+                            SISTERHOOD
+                        </span>
+
+                        <h4>
+                            United by purpose.
+                        </h4>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PHOTO GRID
+        ================================================= -->
+
+        <div
+            class="photo-grid"
+            id="photoGrid">
+
+
+            <!-- PHOTO 01 -->
+
+            <article
+                class="photo-card"
+                data-category="events"
+                data-caption="AIFSA event moment">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            📷
+                        </span>
+
+                        <small>
+                            EVENT PHOTO
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        EVENTS
+                    </span>
+
+                    <h3>
+                        AIFSA Event
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <!-- PHOTO 02 -->
+
+            <article
+                class="photo-card"
+                data-category="leadership"
+                data-caption="AIFSA leadership">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            👩🏽‍💼
+                        </span>
+
+                        <small>
+                            LEADERSHIP PHOTO
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        LEADERSHIP
+                    </span>
+
+                    <h3>
+                        Our Leaders
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <!-- PHOTO 03 -->
+
+            <article
+                class="photo-card"
+                data-category="community"
+                data-caption="AIFSA community activity">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            ✦
+                        </span>
+
+                        <small>
+                            COMMUNITY PHOTO
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        COMMUNITY
+                    </span>
+
+                    <h3>
+                        Making an Impact
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <!-- PHOTO 04 -->
+
+            <article
+                class="photo-card"
+                data-category="sisterhood"
+                data-caption="AIFSA sisterhood">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            ♥
+                        </span>
+
+                        <small>
+                            SISTERHOOD PHOTO
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        SISTERHOOD
+                    </span>
+
+                    <h3>
+                        Together as One
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <!-- PHOTO 05 -->
+
+            <article
+                class="photo-card"
+                data-category="events"
+                data-caption="AIFSA programme">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            📸
+                        </span>
+
+                        <small>
+                            PROGRAMME PHOTO
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        EVENTS
+                    </span>
+
+                    <h3>
+                        AIFSA Programme
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <!-- PHOTO 06 -->
+
+            <article
+                class="photo-card"
+                data-category="community"
+                data-caption="AIFSA community">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            ✦
+                        </span>
+
+                        <small>
+                            COMMUNITY PHOTO
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        COMMUNITY
+                    </span>
+
+                    <h3>
+                        Women Creating Change
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <!-- PHOTO 07 -->
+
+            <article
+                class="photo-card"
+                data-category="leadership"
+                data-caption="AIFSA executive council">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            👩🏽‍💼
+                        </span>
+
+                        <small>
+                            EXECUTIVE COUNCIL
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        LEADERSHIP
+                    </span>
+
+                    <h3>
+                        Executive Council
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <!-- PHOTO 08 -->
+
+            <article
+                class="photo-card"
+                data-category="sisterhood"
+                data-caption="AIFSA members">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            ♥
+                        </span>
+
+                        <small>
+                            MEMBERS
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        SISTERHOOD
+                    </span>
+
+                    <h3>
+                        AIFSA Sisters
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <!-- PHOTO 09 -->
+
+            <article
+                class="photo-card"
+                data-category="events"
+                data-caption="AIFSA conference">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <span>
+                            📷
+                        </span>
+
+                        <small>
+                            CONFERENCE PHOTO
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="photo-overlay">
+
+                    <span>
+                        EVENTS
+                    </span>
+
+                    <h3>
+                        Conference Memories
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+            class="gallery-empty"
+            id="galleryEmpty">
+
+            <span>
+                📷
+            </span>
+
+            <h3>
+                More memories coming soon.
+            </h3>
+
+            <p>
+                Photographs from this category will be added
+                as AIFSA's visual archive continues to grow.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMORY CTA
+===================================================== -->
+
+<section class="gallery-memory section">
+
+    <div class="container">
+
+        <div class="gallery-memory-box">
+
+            <span class="section-tag">
+                PRESERVE THE MOMENT
+            </span>
+
+            <h2>
+                Today's photographs
+                become <em>tomorrow's history.</em>
+            </h2>
+
+            <p>
+                Every AIFSA event can leave behind more than
+                memories. Photographs, speeches, reports and
+                stories can become part of the association's
+                permanent digital history.
+            </p>
+
+            <a
+                href="events-archive.html"
+                class="btn btn-primary">
+
+                Explore Event Archive →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html#home"
+                    class="logo footer-logo">
+
+                    <span class="logo-mark">
+                        A
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>AIFSA</strong>
+                        <small>WORLDWIDE</small>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Akwa Ibom Female Students Association.
+                    A community committed to the value of womanhood.
+                </p>
+
+
+                <strong class="footer-motto">
+                    THE VALUE OF WOMANHOOD.
+                </strong>
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
+                    <a href="../index.html#home">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About AIFSA
+                    </a>
+
+                    <a href="leadership.html">
+                        Leadership
+                    </a>
+
+                    <a href="chapters.html">
+                        Chapters
+                    </a>
+
+                    <a href="events.html">
+                        Events
+                    </a>
+
+                    <a href="events-archive.html">
+                        Events Archive
+                    </a>
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+                    <a href="constitution.html">
+                        Constitution
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        CONNECT
+                    </h4>
+
+                    <a href="../index.html#news">
+                        News
+                    </a>
+
+                    <a href="register.html">
+                        Membership
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="currentYear"></span>
+                AIFSA Worldwide. All rights reserved.
+            </span>
+
+            <span>
+                Akwa Ibom Female Students Association
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true">
+
+    <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close image">
+
+        ×
+
+    </button>
+
+
+    <img
+        src=""
+        alt=""
+        class="lightbox-image"
+        id="lightboxImage">
+
+
+    <div
+        class="lightbox-caption"
+        id="lightboxCaption">
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../app.js"></script>
+
+
+<script>
+
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    const yearElement =
+        document.getElementById("currentYear");
+
+    if (yearElement) {
+
+        yearElement.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                navMenu.classList.toggle("active");
+
+                menuToggle.classList.toggle("active");
+
+            }
+        );
+
+
+        navMenu.querySelectorAll("a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navMenu.classList.remove("active");
+
+                        menuToggle.classList.remove("active");
+
+                    }
+                );
+
+            });
+
+    }
+
+
+    /* =====================================================
+       GALLERY FILTER
+    ===================================================== */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+    const photoCards =
+        document.querySelectorAll(".photo-card");
+
+    const featuredItems =
+        document.querySelectorAll(
+            ".featured-photo, .small-feature"
+        );
+
+    const galleryEmpty =
+        document.getElementById("galleryEmpty");
+
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const filter =
+                    this.getAttribute("data-filter");
+
+
+                filterButtons.forEach(
+                    function (btn) {
+
+                        btn.classList.remove("active");
+
+                    }
+                );
+
+
+                this.classList.add("active");
+
+
+                let visiblePhotos = 0;
+
+
+                photoCards.forEach(
+                    function (card) {
+
+                        const category =
+                            card.getAttribute("data-category");
+
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            card.style.display = "block";
+
+                            visiblePhotos++;
+
+                        } else {
+
+                            card.style.display = "none";
+
+                        }
+
+                    }
+                );
+
+
+                featuredItems.forEach(
+                    function (item) {
+
+                        const category =
+                            item.getAttribute("data-category");
+
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            item.style.display = "";
+
+                        } else {
+
+                            item.style.display = "none";
+
+                        }
+
+                    }
+                );
+
+
+                if (visiblePhotos === 0) {
+
+                    galleryEmpty.style.display = "block";
+
+                } else {
+
+                    galleryEmpty.style.display = "none";
+
+                }
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       LIGHTBOX
+       
+       The lightbox will work automatically when
+       actual <img> elements are added to photo cards.
+    ===================================================== */
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    const lightboxCaption =
+        document.getElementById("lightboxCaption");
+
+    const lightboxClose =
+        document.getElementById("lightboxClose");
+
+
+    photoCards.forEach(function (card) {
+
+        card.addEventListener(
+            "click",
+            function () {
+
+                const image =
+                    card.querySelector("img");
+
+
+                if (!image) {
+
+                    return;
+
+                }
+
+
+                lightboxImage.src =
+                    image.src;
+
+                lightboxImage.alt =
+                    image.alt || "";
+
+
+                lightboxCaption.textContent =
+                    card.getAttribute("data-caption") || "";
+
+
+                lightbox.classList.add("active");
+
+                lightbox.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+            }
+        );
+
+    });
+
+
+    function closeLightbox() {
+
+        lightbox.classList.remove("active");
+
+        lightbox.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        lightboxImage.src = "";
+
+    }
+
+
+    lightboxClose.addEventListener(
+        "click",
+        closeLightbox
+    );
+
+
+    lightbox.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === lightbox) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+</html>

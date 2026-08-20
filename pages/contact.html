@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact AIFSA | Akwa Ibom Female Students Association</title>
+
+    <meta name="description"
+        content="Contact AIFSA Worldwide, the Akwa Ibom Female Students Association. Reach the association by email or WhatsApp for enquiries, partnerships, membership and general information.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        /* =====================================================
+           CONTACT PAGE
+        ===================================================== */
+
+        .contact-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 0 100px;
+            background: #f8f6f0;
+        }
+
+        .contact-hero::before {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            border: 1px solid rgba(18, 88, 62, 0.12);
+            border-radius: 50%;
+            right: -120px;
+            top: -160px;
+        }
+
+        .contact-hero::after {
+            content: "";
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            background: rgba(217, 111, 44, 0.08);
+            left: -100px;
+            bottom: -110px;
+        }
+
+        .contact-hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1050px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb a {
+            color: #12583e;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: #999;
+        }
+
+        .contact-hero h1 {
+            max-width: 850px;
+            margin: 0 0 25px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1.02;
+            color: #18352a;
+        }
+
+        .contact-hero h1 em {
+            color: #12583e;
+        }
+
+        .contact-hero-description {
+            max-width: 700px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #626262;
+        }
+
+
+        /* =====================================================
+           CONTACT MAIN
+        ===================================================== */
+
+        .contact-main {
+            background: #fff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+
+        /* =====================================================
+           CONTACT INFORMATION
+        ===================================================== */
+
+        .contact-info h2 {
+            margin: 15px 0 20px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(36px, 5vw, 52px);
+            line-height: 1.12;
+            color: #18352a;
+        }
+
+        .contact-info h2 em {
+            color: #12583e;
+        }
+
+        .contact-info > p {
+            margin-bottom: 35px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 15px;
+        }
+
+        .contact-detail {
+            display: grid;
+            grid-template-columns: 55px 1fr;
+            gap: 18px;
+            align-items: center;
+            padding: 22px;
+            background: #f8f6f0;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .contact-detail:hover {
+            transform: translateX(5px);
+            background: #eef5f1;
+        }
+
+        .contact-detail-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #12583e;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .contact-detail:nth-child(2) .contact-detail-icon {
+            background: #d96f2c;
+        }
+
+        .contact-detail-label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: #18352a;
+            font-size: 15px;
+            word-break: break-word;
+        }
+
+
+        /* =====================================================
+           CONTACT FORM
+        ===================================================== */
+
+        .contact-form-wrapper {
+            padding: 45px;
+            background: #f8f6f0;
+        }
+
+        .contact-form-header {
+            margin-bottom: 30px;
+        }
+
+        .contact-form-header h3 {
+            margin: 12px 0 8px;
+            font-family: "Playfair Display", serif;
+            font-size: 32px;
+            color: #18352a;
+        }
+
+        .contact-form-header p {
+            margin: 0;
+            color: #777;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 18px;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 16px;
+            border: 1px solid #ddd9cf;
+            outline: none;
+            background: #fff;
+            color: #333;
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            transition: 0.25s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #12583e;
+            box-shadow: 0 0 0 3px rgba(18, 88, 62, 0.08);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .form-note {
+            margin: 0;
+            text-align: center;
+            color: #888;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           WHATSAPP CTA
+        ===================================================== */
+
+        .whatsapp-section {
+            background: #12583e;
+            color: #fff;
+        }
+
+        .whatsapp-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .whatsapp-content {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .whatsapp-icon {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.25);
+            font-size: 30px;
+        }
+
+        .whatsapp-content h2 {
+            margin: 0 0 8px;
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+        }
+
+        .whatsapp-content p {
+            margin: 0;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.6;
+        }
+
+        .whatsapp-button {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: #fff;
+            color: #12583e;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+            transition: 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .faq-section {
+            background: #f8f6f0;
+        }
+
+        .faq-heading {
+            max-width: 650px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .faq-heading h2 {
+            margin: 15px 0;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(36px, 5vw, 52px);
+            color: #18352a;
+        }
+
+        .faq-heading h2 em {
+            color: #12583e;
+        }
+
+        .faq-heading p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .faq-list {
+            max-width: 850px;
+            margin: auto;
+            display: grid;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border: 1px solid #e7e3da;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 22px 25px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            text-align: left;
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #18352a;
+        }
+
+        .faq-plus {
+            flex-shrink: 0;
+            font-size: 22px;
+            font-weight: 400;
+            color: #12583e;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 25px 23px;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-plus {
+            transform: rotate(45deg);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .whatsapp-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .contact-hero {
+                padding: 125px 0 75px;
+            }
+
+            .contact-form-wrapper {
+                padding: 30px 22px;
+            }
+
+            .whatsapp-content {
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .contact-hero h1 {
+                font-size: 46px;
+            }
+
+            .contact-hero-description {
+                font-size: 15px;
+            }
+
+            .contact-detail {
+                grid-template-columns: 45px 1fr;
+                padding: 17px;
+                gap: 13px;
+            }
+
+            .contact-detail-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .whatsapp-content {
+                display: block;
+            }
+
+            .whatsapp-icon {
+                margin-bottom: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header" id="header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html#home" class="logo">
+
+            <span class="logo-mark">
+                A
+            </span>
+
+            <span class="logo-text">
+                <strong>AIFSA</strong>
+                <small>WORLDWIDE</small>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="../index.html#home" class="nav-link">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="leadership.html" class="nav-link">
+                Leadership
+            </a>
+
+            <a href="chapters.html" class="nav-link">
+                Chapters
+            </a>
+
+            <a href="events.html" class="nav-link">
+                Events
+            </a>
+
+            <a href="gallery.html" class="nav-link">
+                Gallery
+            </a>
+
+            <a href="constitution.html" class="nav-link">
+                Constitution
+            </a>
+
+            <a href="../index.html#news" class="nav-link">
+                News
+            </a>
+
+            <a href="register.html" class="nav-join">
+                Join AIFSA
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="contact-hero">
+
+    <div class="container contact-hero-container">
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <span>→</span>
+
+            <span>
+                Contact
+            </span>
+
+        </div>
+
+
+        <span class="section-tag">
+            GET IN TOUCH
+        </span>
+
+
+        <h1>
+            Let's stay
+            <em>connected.</em>
+        </h1>
+
+
+        <p class="contact-hero-description">
+            Have a question, suggestion, partnership idea or
+            enquiry for AIFSA? We would love to hear from you.
+            Reach out through any of our available contact channels.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT INFORMATION + FORM
+===================================================== -->
+
+<section class="contact-main section">
+
+    <div class="container contact-grid">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+            <span class="section-tag">
+                CONTACT AIFSA
+            </span>
+
+            <h2>
+                We are here
+                <em>to listen.</em>
+            </h2>
+
+            <p>
+                Whether you are an AIFSA member, student,
+                institution, organization, potential partner
+                or simply interested in learning more about
+                the association, you can contact us directly.
+            </p>
+
+
+            <div class="contact-details">
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:mhilaensimah@gmail.com"
+                    class="contact-detail">
+
+                    <div class="contact-detail-icon">
+                        ✉
+                    </div>
+
+                    <div>
+
+                        <span class="contact-detail-label">
+                            Email
+                        </span>
+
+                        <strong>
+                            mhilaensimah@gmail.com
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="https://wa.me/2347063492233"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-detail">
+
+                    <div class="contact-detail-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <span class="contact-detail-label">
+                            WhatsApp
+                        </span>
+
+                        <strong>
+                            07063492233
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form-wrapper">
+
+            <div class="contact-form-header">
+
+                <span class="section-tag">
+                    SEND A MESSAGE
+                </span>
+
+                <h3>
+                    How can we help?
+                </h3>
+
+                <p>
+                    Fill out the form below and your email
+                    application will open automatically.
+                </p>
+
+            </div>
+
+
+            <form
+                class="contact-form"
+                id="contactForm">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Enquiry Type
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                        required>
+
+                        <option value="">
+                            Select an enquiry type
+                        </option>
+
+                        <option value="Membership">
+                            Membership
+                        </option>
+
+                        <option value="Chapter">
+                            Chapter Enquiry
+                        </option>
+
+                        <option value="Partnership">
+                            Partnership
+                        </option>
+
+                        <option value="Sponsorship">
+                            Sponsorship
+                        </option>
+
+                        <option value="Event">
+                            Event Enquiry
+                        </option>
+
+                        <option value="General">
+                            General Enquiry
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary form-submit">
+
+                    Send Message →
+
+                </button>
+
+
+                <p class="form-note">
+                    Your message will open in your email application
+                    addressed to the AIFSA contact email.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<section class="whatsapp-section section">
+
+    <div class="container whatsapp-container">
+
+        <div class="whatsapp-content">
+
+            <div class="whatsapp-icon">
+                ☎
+            </div>
+
+            <div>
+
+                <h2>
+                    Need a quicker response?
+                </h2>
+
+                <p>
+                    Reach AIFSA directly on WhatsApp.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="https://wa.me/2347063492233"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-button">
+
+            Chat on WhatsApp
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="faq-section section">
+
+    <div class="container">
+
+        <div class="faq-heading">
+
+            <span class="section-tag">
+                QUICK ANSWERS
+            </span>
+
+            <h2>
+                Frequently asked
+                <em>questions.</em>
+            </h2>
+
+            <p>
+                Here are some common questions about getting
+                in touch with AIFSA.
+            </p>
+
+        </div>
+
+
+        <div class="faq-list">
+
+
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button">
+
+                    How can I become an AIFSA member?
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    You can visit the Membership page on this
+                    website and complete the registration process.
+                    You may also contact AIFSA directly for further
+                    information.
+
+                </div>
+
+            </article>
+
+
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button">
+
+                    How can my institution establish an AIFSA chapter?
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    Contact AIFSA through the email address or
+                    WhatsApp number provided on this page.
+                    The association can provide information about
+                    chapter establishment and recognition.
+
+                </div>
+
+            </article>
+
+
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button">
+
+                    Can organizations partner with AIFSA?
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    Yes. Organizations, institutions, brands and
+                    individuals interested in partnerships,
+                    sponsorships, collaborations or programmes
+                    can contact AIFSA to discuss opportunities.
+
+                </div>
+
+            </article>
+
+
+            <article class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button">
+
+                    How can I enquire about an AIFSA event?
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    You can contact AIFSA through email or WhatsApp
+                    for information about upcoming events,
+                    registration, participation, partnerships
+                    and sponsorship opportunities.
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html#home"
+                    class="logo footer-logo">
+
+                    <span class="logo-mark">
+                        A
+                    </span>
+
+                    <span class="logo-text">
+                        <strong>AIFSA</strong>
+                        <small>WORLDWIDE</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Akwa Ibom Female Students Association.
+                    A community committed to the value of womanhood.
+                </p>
+
+                <strong class="footer-motto">
+                    THE VALUE OF WOMANHOOD.
+                </strong>
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
+                    <a href="about.html">
+                        About AIFSA
+                    </a>
+
+                    <a href="leadership.html">
+                        Leadership
+                    </a>
+
+                    <a href="chapters.html">
+                        Chapters
+                    </a>
+
+                    <a href="events.html">
+                        Events
+                    </a>
+
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+
+                    <a href="constitution.html">
+                        Constitution
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        CONNECT
+                    </h4>
+
+                    <a href="../index.html#news">
+                        News
+                    </a>
+
+                    <a href="event-archive.html">
+                        Event Archive
+                    </a>
+
+                    <a href="register.html">
+                        Membership
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="currentYear"></span>
+                AIFSA Worldwide. All rights reserved.
+            </span>
+
+            <span>
+                Akwa Ibom Female Students Association
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../app.js"></script>
+
+<script>
+
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    const yearElement = document.getElementById("currentYear");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+
+        });
+
+
+        const navLinks = navMenu.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navMenu.classList.remove("active");
+                menuToggle.classList.remove("active");
+
+            });
+
+        });
+
+    }
+
+
+    /* =====================================================
+       CONTACT FORM
+       Opens the user's email application
+    ===================================================== */
+
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+
+        contactForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const subject =
+                document.getElementById("subject").value;
+
+            const message =
+                document.getElementById("message").value.trim();
+
+
+            const emailSubject =
+                encodeURIComponent(
+                    "AIFSA Website Enquiry - " + subject
+                );
+
+
+            const emailBody =
+                encodeURIComponent(
+                    "Hello AIFSA,\n\n" +
+                    "My name is " + name + ".\n\n" +
+                    "My email address is: " + email + "\n\n" +
+                    "Enquiry type: " + subject + "\n\n" +
+                    "Message:\n" +
+                    message +
+                    "\n\nThank you."
+                );
+
+
+            window.location.href =
+                "mailto:mhilaensimah@gmail.com" +
+                "?subject=" + emailSubject +
+                "&body=" + emailBody;
+
+        });
+
+    }
+
+
+    /* =====================================================
+       FAQ ACCORDION
+    ===================================================== */
+
+    const faqItems =
+        document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(function (item) {
+
+        const question =
+            item.querySelector(".faq-question");
+
+        question.addEventListener("click", function () {
+
+            const isActive =
+                item.classList.contains("active");
+
+
+            faqItems.forEach(function (otherItem) {
+
+                otherItem.classList.remove("active");
+
+            });
+
+
+            if (!isActive) {
+
+                item.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
